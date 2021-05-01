@@ -8,7 +8,7 @@ object CdkScalaExperimentApp extends scala.App {
   println("Hello world");
   val app = new App
 
-  new CdkScalaExperimentStack(app, "CdkScalaExperimentStack", StackProps.builder()
+  new CdkScalaExperimentStack(app, "CdkScalaExperimentStack", StackProps.builder
     // If you don't specify 'env', this stack will be environment-agnostic.
     // Account/Region-dependent features and context lookups will not work,
     // but a single synthesized template can be deployed anywhere.
@@ -34,5 +34,5 @@ object CdkScalaExperimentApp extends scala.App {
     // For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
     .build)
 
-  app.synth()
+  app.synth
 }

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import org.scalatest.flatspec.AnyFlatSpec
+import com.fasterxml.jackson.databind.JsonNode
 
 class CdkScalaExperimentTest extends AnyFlatSpec {
 
@@ -13,8 +14,8 @@ class CdkScalaExperimentTest extends AnyFlatSpec {
   "A CdkScalaExperimentApp" should "contain no resources" in {
     val app = new App
     val stack = new CdkScalaExperimentStack(app, "test")
-    assertResult(new ObjectMapper().createObjectNode) {
-      JSON.valueToTree(app.synth.getStackArtifact(stack.getArtifactId).getTemplate)
-    }
+    val actual: JsonNode = JSON.valueToTree(app.synth.getStackArtifact(stack.getArtifactId).getTemplate)
+    // TODO compare against a checked-in JSON file https://github.com/aws/aws-cdk/pull/14444
+    assert(actual.get("Resources") === null)
   }
 }
