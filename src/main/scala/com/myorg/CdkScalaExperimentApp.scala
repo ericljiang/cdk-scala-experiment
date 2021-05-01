@@ -1,11 +1,10 @@
-package com.myorg;
+package com.myorg
 
-import software.amazon.awscdk.App;
-import software.amazon.awscdk.Environment;
-import software.amazon.awscdk.StackProps;
+import software.amazon.awscdk.App
+import software.amazon.awscdk.StackProps
 
 object CdkScalaExperimentApp extends scala.App {
-  println("Hello world");
+  println("Hello world")
   val app = new App
 
   new CdkScalaExperimentStack(app, "CdkScalaExperimentStack", StackProps.builder

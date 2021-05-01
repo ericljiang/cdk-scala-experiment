@@ -1,8 +1,8 @@
-package com.myorg;
+package com.myorg
 
-import software.amazon.awscdk.App;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import software.amazon.awscdk.App
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.SerializationFeature
 
 import org.scalatest.flatspec.AnyFlatSpec
 import com.fasterxml.jackson.databind.JsonNode
