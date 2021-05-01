@@ -8,8 +8,11 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@RunWith(JUnitPlatform.class)
 public class CdkScalaExperimentTest {
     private final static ObjectMapper JSON =
         new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true);

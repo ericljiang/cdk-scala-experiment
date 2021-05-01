@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 public class CdkScalaExperimentApp {
     public static void main(final String[] args) {
+        System.out.println("Hello world");
         App app = new App();
 
         new CdkScalaExperimentStack(app, "CdkScalaExperimentStack", StackProps.builder()
